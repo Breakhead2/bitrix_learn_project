@@ -1,38 +1,46 @@
 <?
-$aMenuLinks = [
-    [
-        "Главная",
-        "/",
-        [],
-        [],
-        ""
-    ],
-    [
-        "О нас",
-        "/about_us",
-        [],
-        ["TEST_PROPERTY" => "TEST"],
-        ""
-    ],
-    [
-        "Портфолио",
-        "/portfolio",
-        [],
-        [],
-        ""
-    ],
-    [
-        "Блог",
-        "/blog",
-        [],
-        [],
-        ""
-    ],[
-        "Контакты",
-        "/contacts",
-        [],
-        [],
-        ""
-    ],
-];
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О нас", 
+		"/about_us", 
+		Array(), 
+		Array("TEST_PROPERTY"=>"TEST"), 
+		"" 
+	),
+	Array(
+		"Портфолио", 
+		"/portfolio", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Блог", 
+		"/blog", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новая страница", 
+		"/test.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
 ?>

@@ -45,7 +45,7 @@ use Bitrix\Main\Page\Asset;
 			<?$APPLICATION->ShowPanel();?>
 		</div>
         <!-- Шапка сайта (меню) -->
-        <header id="sticky-header" class="header-area header-wrapper white-bg">
+        <header id="sticky-header" class="header-area header-wrapper <?php echo $APPLICATION->GetCurPage() === '/' ? 'transparent-header' : 'white-bg'?>">
             <!-- Меню (для десктопа) -->
             <div class="header-middle-area full-width">
                 <div class="container">
@@ -148,6 +148,8 @@ use Bitrix\Main\Page\Asset;
                 </div>
             </div>
         </header>
+
+        <?php if($APPLICATION->GetCurPage() !== '/' ): ?>
         <!-- Хлебные крошки (навигация) -->
         <div class="breadcrumb-area brand-bg ptb-100">
             <div class="container width-100">
@@ -160,18 +162,16 @@ use Bitrix\Main\Page\Asset;
                     <div class="col-md-5 col-sm-6">
                         <div class="breadcrumb-menu">
                             <ol class="breadcrumb text-right">
-                                <?php if($APPLICATION->GetCurPage() !== '/' ): ?>
                                 <li>
                                     <a href="/">Главная</a>
                                 </li>
                                 <li>
                                     <a href="<?= $APPLICATION->GetPageProperty('LINK')?>"><?= $APPLICATION->ShowTitle(false) ?></a>
                                 </li>
-                                <?php endif;?>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-						
+        <?php endif;?>
